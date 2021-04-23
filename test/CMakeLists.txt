@@ -17,7 +17,7 @@ enable_testing()
 
 add_executable(
     ${PROJECT_NAME}
-    gcd.cc
+    math.cc
 )
 
 target_link_libraries(
