@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 3.16)
 project(rsa_utils_test VERSION 0.1)
 
 # GoogleTest requires at least C++11
@@ -17,7 +17,7 @@ enable_testing()
 
 add_executable(
     ${PROJECT_NAME}
-    math.cc
+    math_tests.cc
 )
 
 target_link_libraries(

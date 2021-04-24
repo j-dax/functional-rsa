@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "math.hpp"
+#include "math_utils.h"
 
 TEST(UTILS, GCD) {
     EXPECT_EQ(5, euclidean_algorithm(5,10));
@@ -7,7 +7,7 @@ TEST(UTILS, GCD) {
     EXPECT_EQ(1, euclidean_algorithm(17,13));
 }
 
-TEST(UTILS, GCD) {
+TEST(UTILS, LCM) {
     EXPECT_EQ(0, lcm(0,0)); // base case
     EXPECT_EQ(84, lcm(21,4)); // 7 * 3 * 4
     EXPECT_EQ(420, lcm(35,12)); // 3 * 4 * 5 * 7
