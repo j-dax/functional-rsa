@@ -19,7 +19,6 @@ add_executable(
   ${PROJECT_NAME}
   rsa_utils_math_tests.cc
   rsa_utils_primes_tests.cc
-  variable_byte_tests.cc
 )
 target_link_libraries(
   ${PROJECT_NAME}
@@ -43,16 +42,6 @@ add_executable(
 )
 target_link_libraries(
   rsa_utils_primes_tests
-  rsa_utils
-  gtest_main
-)
-
-add_executable(
-  variable_byte_tests
-  variable_byte_tests.cc
-)
-target_link_libraries(
-  variable_byte_tests
   rsa_utils
   gtest_main
 )
