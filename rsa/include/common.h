@@ -3,9 +3,9 @@
 #include <algorithm>
 #include <numeric>
 #include <functional>
-#include <list>
+#include <cstdlib>
+#include <ctime>
 
 // DEBUGGING
-#include "debug.h"
 #include <iterator>
 #include <iostream>

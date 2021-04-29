@@ -5,6 +5,9 @@ project(rsa_utils VERSION 0.1)
 add_library(
     ${PROJECT_NAME}
     STATIC src/math_utils.cpp
+    src/primes.cpp
+    src/print.cpp
+    src/variable_byte_unsigned_integer.cpp
 )
 
 target_include_directories(
