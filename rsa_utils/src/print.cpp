@@ -1,8 +1,8 @@
 #include "print.h"
 
 template<typename T>
-void print_iterator(std::list<T> it) {
+void output_container(std::ostream& os, std::vector<T> container) {
     std::cout << "[ ";
-    std::copy(it.begin(),it.end(),std::ostream_iterator<T>(std::cout, ", "));
+    std::copy(container.begin(),container.end(),std::ostream_iterator<T>(os, ", "));
     std::cout << " ]" << std::endl;
 }

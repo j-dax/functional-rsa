@@ -6,7 +6,7 @@ namespace rsa {
     void generate_key();
     
     void encrypt_message();
-    void add_padding_();
+    void add_padding_(); // https://www.di-mgt.com.au/rsa_alg.html#pkcs1schemes
 
     void decrypt_message();
     void remove_padding_();

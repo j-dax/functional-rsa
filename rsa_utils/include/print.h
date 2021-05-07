@@ -1,4 +1,6 @@
+#pragma once
+
 #include "common.h"
 
 template<typename T>
-void print_iterator(std::list<T> it);
+void output_container(std::ostream& os, std::vector<T> container);

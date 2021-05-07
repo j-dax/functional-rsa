@@ -7,6 +7,7 @@ add_library(
     STATIC src/math_utils.cpp
     src/primes.cpp
     src/print.cpp
+    src/large_number.cpp
 )
 
 target_include_directories(

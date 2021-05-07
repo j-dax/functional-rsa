@@ -7,7 +7,7 @@ namespace rsa_utils {
      * The magnitude of coprimes is at most n - 1. By definition, coprimes of
      * a prime number are all positive numbers less than it.
      */
-    std::list<unsigned int> find_coprimes(unsigned int n) {
+    std::vector<unsigned int> find_coprimes(unsigned int n) {
         if (n <= 2) return {1};
 
         auto not_coprime = std::bind([](unsigned int a, unsigned int b)
@@ -15,7 +15,7 @@ namespace rsa_utils {
             n,
             std::placeholders::_1
         );
-        std::list<unsigned int> coprimes(n);
+        std::vector<unsigned int> coprimes(n);
         std::iota(coprimes.begin(), coprimes.end(), 1);
         
         coprimes.erase(
@@ -36,11 +36,11 @@ namespace rsa_utils {
     unsigned int carmichael_totient(unsigned int n) {
         if (n <= 2) return 1;
 
-        std::list<unsigned int> base = find_coprimes(n);
+        std::vector<unsigned int> base = find_coprimes(n);
         // number is prime, primes are n-1
         if (base.size() == n - 1) return n-1;
 
-        std::list<unsigned int> power_list(base.size());
+        std::vector<unsigned int> power_list(base.size());
         std::copy(base.begin(), base.end(), power_list.begin());
         // 
         auto mod_n_is_one = std::bind([&](unsigned int a, unsigned int bind_n) {

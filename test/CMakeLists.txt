@@ -46,5 +46,15 @@ target_link_libraries(
   gtest_main
 )
 
+add_executable(
+  large_number_tests
+  large_number_tests.cc
+)
+target_link_libraries(
+  large_number_tests
+  rsa_utils
+  gtest_main
+)
+
 include(GoogleTest)
 gtest_discover_tests(${PROJECT_NAME})
